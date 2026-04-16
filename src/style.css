@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap);
 html {
   box-sizing: border-box;
 }
@@ -5,11 +6,6 @@ html {
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
 }
 
 :root {
@@ -36,6 +32,8 @@ ul {
 .nav__list {
   display: flex;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav__list > li + li {
@@ -51,6 +49,9 @@ ul {
   text-decoration: none;
   text-transform: uppercase;
   position: relative;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
 }
 
 .nav__link:hover {
