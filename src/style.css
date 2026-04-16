@@ -1,70 +1,73 @@
-/* Сброс */
-* {
-  margin: 0;
-  padding: 0;
+html {
   box-sizing: border-box;
 }
 
-/* Переменная цвета */
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --blue: #00acdc;
 }
 
-/* Шрифт */
-body {
-  font-family: 'Roboto', sans-serif;
-}
-
-/* HEADER */
 .header {
-  height: 60px; /* важно — в одном месте */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
 }
 
-/* ЛОГО */
-.logo img {
-  height: 40px;
-  display: block;
+.logo {
+  display: flex;
+  align-items: center;
 }
 
-/* СПИСОК */
+.logo__img {
+  display: block;
+  height: 40px;
+}
+
 .nav__list {
   display: flex;
   list-style: none;
 }
 
-/* ССЫЛКИ */
+.nav__list > li + li {
+  margin-left: 20px;
+}
+
 .nav__link {
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 60px;
-  margin-left: 20px;
-  text-decoration: none;
   color: #000;
+  text-decoration: none;
   text-transform: uppercase;
   position: relative;
 }
 
-/* HOVER */
 .nav__link:hover {
   color: var(--blue);
 }
 
-/* АКТИВНЫЙ */
 .is-active {
   color: var(--blue);
 }
 
-/* ЛИНИЯ ПОД АКТИВНЫМ */
 .is-active::after {
   content: "";
   position: absolute;
-  left: 0;
+  right: 0;
   bottom: 0;
-  width: 100%;
+  left: 0;
   height: 4px;
   background-color: var(--blue);
+  border-radius: 8px;
 }
